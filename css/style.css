@@ -1,20 +1,32 @@
-/* 全局重置，消除默认边距 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 body {
-    background-color: #f0f0f0;
-    padding: 20px;
+  background-color: #f0f0f0;
+  padding: 0;
 }
-
 img {
-    max-width: 1920px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;
+  cursor: pointer;
+}
+.page {
+  display: none;
+  line-height: 0;
+}
+#home {
+  display: block;
+}
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.lazy:not(.lazy) {
+  opacity: 1;
 }
