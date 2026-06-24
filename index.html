@@ -7,6 +7,38 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="js/main.js"></script>
 </head>
+<script>
+// 懒加载逻辑
+document.addEventListener('DOMContentLoaded', function() {
+  const lazyImages = document.querySelectorAll('img.lazy');
+
+  if ('IntersectionObserver' in window) {
+    let observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          obs.unobserve(img);
+        }
+      });
+    });
+    lazyImages.forEach(img => observer.observe(img));
+  } else {
+    // 兼容老旧浏览器降级
+    function loadImg() {
+      lazyImages.forEach(img => {
+        if (img.getBoundingClientRect().top < window.innerHeight) {
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+        }
+      });
+    }
+    window.addEventListener('scroll', loadImg);
+    loadImg();
+  }
+});
+</script>
 <body>
 
 <!-- 1.首页 -->
