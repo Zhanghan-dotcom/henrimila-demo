@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henrimila</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Henrimila</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js"></script>
 </head>
 <body>
-    <!-- 这里加上 loading="lazy" -->
-    <img src="index.jpg" alt="自适应居中图片" loading="lazy">
+
+<!-- 1.首页 -->
+<div class="page" id="home">
+  <img src="images/index.jpg" onclick="nextPage()">
+</div>
+
+<!-- 2.品牌简介 -->
+<div class="page" id="intro" style="display:none">
+  <img src="images/Introduction.jpg" onclick="nextPage()">
+</div>
+
+<!-- 3.品牌赋能 -->
+<div class="page" id="empower" style="display:none">
+  <img src="images/Empowerment.jpg" onclick="nextPage()">
+</div>
+
+<!-- 4.工艺介绍 -->
+<div class="page" id="craft" style="display:none">
+  <img src="images/Craft.jpg" onclick="nextPage()">
+</div>
+
+<!-- 5.产品中心 -->
+<div class="page" id="product" style="display:none">
+  <img src="images/Product.jpg" onclick="nextPage()">
+</div>
+
+<!-- 6.产品中心详情 -->
+<div class="page" id="proDetail" style="display:none">
+  <img src="images/Product Details.jpg" onclick="nextPage()">
+</div>
+
+<!-- 7.案例中心 -->
+<div class="page" id="case" style="display:none">
+  <img src="images/Case.jpg" onclick="nextPage()">
+</div>
+
+<!-- 8.案例中心详情 -->
+<div class="page" id="caseDetail" style="display:none">
+  <img src="images/Case Details.jpg" onclick="nextPage()">
+</div>
+
+<!-- 9.新闻资讯 -->
+<div class="page" id="news" style="display:none">
+  <img src="images/News.jpg" onclick="nextPage()">
+</div>
+
+<!-- 10.新闻详情 -->
+<div class="page" id="newsDetail" style="display:none">
+  <img src="images/News Details.jpg" onclick="nextPage()">
+</div>
+
+<!-- 11.线下门店 -->
+<div class="page" id="store" style="display:none">
+  <img src="images/Offline Store.jpg" onclick="nextPage()">
+</div>
+
+<!-- 12.联系我们（最后一页，点击无效果） -->
+<div class="page" id="contact" style="display:none">
+  <img src="images/Contact.jpg" onclick="nextPage()">
+</div>
+
 </body>
 </html>
