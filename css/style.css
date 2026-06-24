@@ -23,10 +23,3 @@ img {
 #home {
   display: block;
 }
-.lazy {
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
-}
-.lazy:not(.lazy) {
-  opacity: 1;
-}
